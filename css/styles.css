@@ -1,7 +1,7 @@
 /* ==========================================================================
    Brown's Asphalt Maintenance (BAM Striping)
    Premium design system — 2026
-   Palette: asphalt charcoal + safety-stripe yellow
+   Palette: asphalt charcoal + safety-stripe orange
    ========================================================================== */
 
 :root {
@@ -17,9 +17,9 @@
   --mist-100: #f4f5f7;
   --white: #ffffff;
 
-  --stripe: #ffd200;     /* safety striping yellow */
-  --stripe-dark: #e6b800;
-  --stripe-glow: rgba(255, 210, 0, 0.28);
+  --stripe: #ff7a00;     /* safety striping orange */
+  --stripe-dark: #e56700;
+  --stripe-glow: rgba(255, 122, 0, 0.28);
 
   --success: #2f9e44;
   --danger: #e03131;
@@ -306,7 +306,7 @@ p { color: var(--text-soft); }
   position: relative;
   color: var(--text-invert);
   background:
-    radial-gradient(1200px 600px at 80% -10%, rgba(255, 210, 0, 0.12), transparent 60%),
+    radial-gradient(1200px 600px at 80% -10%, rgba(255, 122, 0, 0.12), transparent 60%),
     linear-gradient(160deg, var(--asphalt-900) 0%, var(--asphalt-700) 55%, var(--asphalt-800) 100%);
   overflow: hidden;
   isolation: isolate;
@@ -318,7 +318,7 @@ p { color: var(--text-soft); }
   inset: 0;
   background-image: repeating-linear-gradient(
     -45deg,
-    rgba(255, 210, 0, 0.05) 0 2px,
+    rgba(255, 122, 0, 0.05) 0 2px,
     transparent 2px 26px
   );
   z-index: -1;
@@ -372,7 +372,7 @@ p { color: var(--text-soft); }
   content: "";
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(-20deg, rgba(255,210,0,.08) 0 4px, transparent 4px 34px);
+  background: repeating-linear-gradient(-20deg, rgba(255,122,0,.08) 0 4px, transparent 4px 34px);
 }
 .hero-quote {
   position: relative;
@@ -498,7 +498,7 @@ p { color: var(--text-soft); }
 .media-panel::before {
   content: "";
   position: absolute; inset: 0;
-  background: repeating-linear-gradient(90deg, transparent 0 46px, rgba(255,210,0,.14) 46px 52px);
+  background: repeating-linear-gradient(90deg, transparent 0 46px, rgba(255,122,0,.14) 46px 52px);
 }
 .media-panel__lane {
   position: relative;
@@ -595,7 +595,7 @@ p { color: var(--text-soft); }
 .cta-band {
   position: relative;
   background:
-    radial-gradient(900px 400px at 15% 0%, rgba(255,210,0,.14), transparent 55%),
+    radial-gradient(900px 400px at 15% 0%, rgba(255,122,0,.14), transparent 55%),
     linear-gradient(120deg, var(--asphalt-900), var(--asphalt-700));
   color: var(--white);
   border-radius: var(--radius-lg);
@@ -606,7 +606,7 @@ p { color: var(--text-soft); }
 .cta-band::before {
   content: "";
   position: absolute; inset: 0; z-index: -1;
-  background: repeating-linear-gradient(-45deg, rgba(255,210,0,.06) 0 2px, transparent 2px 28px);
+  background: repeating-linear-gradient(-45deg, rgba(255,122,0,.06) 0 2px, transparent 2px 28px);
 }
 .cta-band__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2rem; }
 .cta-band h2 { color: var(--white); margin-bottom: 0.6rem; }
@@ -723,7 +723,7 @@ p { color: var(--text-soft); }
   position: relative;
   color: var(--white);
   background:
-    radial-gradient(900px 500px at 85% -20%, rgba(255,210,0,.12), transparent 60%),
+    radial-gradient(900px 500px at 85% -20%, rgba(255,122,0,.12), transparent 60%),
     linear-gradient(160deg, var(--asphalt-900), var(--asphalt-700));
   padding: clamp(3rem, 7vw, 5rem) 0 clamp(3rem, 6vw, 4.5rem);
   overflow: hidden;
@@ -732,7 +732,7 @@ p { color: var(--text-soft); }
 .page-hero::before {
   content: "";
   position: absolute; inset: 0; z-index: -1;
-  background: repeating-linear-gradient(-45deg, rgba(255,210,0,.05) 0 2px, transparent 2px 26px);
+  background: repeating-linear-gradient(-45deg, rgba(255,122,0,.05) 0 2px, transparent 2px 26px);
 }
 .page-hero::after {
   content: "";
