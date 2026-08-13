@@ -223,6 +223,17 @@ p { color: var(--text-soft); }
 }
 .brand { display: flex; align-items: center; gap: 0.7rem; }
 .brand__logo { width: 46px; height: 46px; flex: none; }
+.brand__logo-img {
+  height: 52px;
+  width: auto;
+  max-width: 230px;
+  display: block;
+  object-fit: contain;
+}
+.site-footer .brand__logo-img { height: 48px; }
+@media (max-width: 520px) {
+  .brand__logo-img { height: 44px; max-width: 180px; }
+}
 .brand__name {
   font-family: var(--font-head);
   font-weight: 700;
