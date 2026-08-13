@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | BAM Striping</title>
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#0e0f12" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .err { min-height: 80vh; display: grid; place-items: center; text-align: center; }
+    .err__code { font-family: var(--font-head); font-size: clamp(6rem, 20vw, 12rem); line-height: 1; color: var(--stripe); -webkit-text-stroke: 2px var(--stripe-dark); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html" aria-label="BAM Striping home">
+          <svg class="brand__logo" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0e0f12"/><rect x="8" y="27" width="48" height="10" rx="2" fill="#2b2e36"/><rect x="10" y="30.5" width="9" height="3" rx="1.5" fill="#ffd200"/><rect x="27.5" y="30.5" width="9" height="3" rx="1.5" fill="#ffd200"/><rect x="45" y="30.5" width="9" height="3" rx="1.5" fill="#ffd200"/><text x="32" y="22" font-family="Arial" font-size="16" font-weight="800" fill="#fff" text-anchor="middle">BAM</text><text x="32" y="52" font-family="Arial" font-size="9" font-weight="700" fill="#9aa1ac" text-anchor="middle">STRIPING</text></svg>
+          <span><span class="brand__name">BAM<span>.</span>Striping</span></span>
+        </a>
+        <a class="btn" href="contact.html">Free Estimate</a>
+      </nav>
+    </div>
+  </header>
+  <main class="err">
+    <div class="container">
+      <div class="err__code">404</div>
+      <h1>This Lane Doesn't Exist</h1>
+      <p class="lead mx-auto maxw-720" style="margin:1rem auto 2rem">The page you're looking for may have moved or been re-striped. Let's get you back on track.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a class="btn btn--lg" href="index.html">Back to Home</a>
+        <a class="btn btn--outline btn--lg" href="services.html">View Services</a>
+      </div>
+    </div>
+  </main>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
