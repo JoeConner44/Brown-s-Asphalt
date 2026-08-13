@@ -1,13 +1,25 @@
 # Brand assets
 
-Place the BAM Striping logo here as **`logo.png`** (this exact filename).
-
-- Used in the site header, the footer, and as the browser-tab favicon.
+## `logo.png` — the site logo
+- Shown in the site header and footer.
 - A transparent-background PNG works best. If your logo is dark, note that the
   footer sits on a dark asphalt background — you may want a light/white version
   there; ask and I can wire up a separate `logo-light.png` for the footer.
-- Optional: a square `logo.png` (or a dedicated square icon) makes the cleanest
-  browser-tab favicon.
+- If your logo isn't a PNG (e.g. SVG or JPG), tell me and I'll update the
+  references.
 
-Accepted just as easily as SVG/JPG — if your file isn't a PNG, tell me the
-format and I'll update the references.
+## Favicon set (from favicon.io)
+Drop these files from the favicon.io download **into this `assets/` folder**
+(the HTML and `site.webmanifest` already reference them at these exact names):
+
+- `favicon.ico`
+- `favicon-16x16.png`
+- `favicon-32x32.png`
+- `apple-touch-icon.png` (180×180)
+- `android-chrome-192x192.png`
+- `android-chrome-512x512.png`
+
+**Skip the `site.webmanifest` that came in the favicon.io zip** — this project
+already has its own richer `site.webmanifest` at the repo root (with the business
+name, colors, and the two Android icons wired up). No HTML changes are needed;
+just add the image files above.
