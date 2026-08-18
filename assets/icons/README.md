@@ -8,7 +8,7 @@ cards. Drop your GIF files into this folder using these **exact filenames**
 | --- | --- |
 | `striping.gif` | Parking Lot Striping |
 | `sealcoating.gif` | Sealcoating |
-| `asphalt-paving.gif` | Asphalt Paving & Repair |
+| `asphalt-repair.gif` | Asphalt Repair |
 | `thermoplastic.gif` | Thermoplastic Markings |
 | `signage.gif` | Signs & Bollards |
 
