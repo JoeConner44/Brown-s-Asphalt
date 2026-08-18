@@ -583,7 +583,7 @@ p { color: var(--text-soft); }
 .step p { font-size: 0.94rem; }
 
 /* ---------- Testimonials ---------- */
-.quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
+.quotes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.75rem; align-items: start; }
 .quote {
   background: var(--white);
   border: 1px solid var(--border);

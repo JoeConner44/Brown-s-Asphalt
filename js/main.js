@@ -50,6 +50,16 @@
     reveals.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
+  /* ---- Auto-updating "years in business" (recomputes every Jan 1) ---- */
+  document.querySelectorAll("[data-since-year]").forEach(function (el) {
+    var since = parseInt(el.getAttribute("data-since-year"), 10);
+    if (!since) return;
+    var years = new Date().getFullYear() - since;
+    var suffix = el.getAttribute("data-suffix") || "";
+    el.setAttribute("data-count", years);
+    el.textContent = years + suffix;
+  });
+
   /* ---- Animated stat counters ---- */
   var counters = document.querySelectorAll("[data-count]");
   if ("IntersectionObserver" in window && counters.length) {
