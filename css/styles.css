@@ -476,6 +476,25 @@ p { color: var(--text-soft); }
   margin-bottom: 1.25rem;
 }
 .card__icon svg { width: 28px; height: 28px; }
+
+/* GIF / image icons fill the icon tile */
+.card__icon--media { padding: 0; overflow: hidden; }
+.card__icon--media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+}
+
+/* Maintenance Plans: clock hands spin while hovering the card */
+.card--maintenance .clock__hand {
+  transform-box: view-box;
+  transform-origin: 12px 12px;
+}
+.card--maintenance:hover .clock__hand--minute { animation: clock-spin 1.4s linear infinite; }
+.card--maintenance:hover .clock__hand--hour { animation: clock-spin 8s linear infinite; }
+@keyframes clock-spin { to { transform: rotate(360deg); } }
 .card h3 { margin-bottom: 0.6rem; }
 .card p { font-size: 0.96rem; margin-bottom: 1.1rem; flex: 1; }
 .card__link {
