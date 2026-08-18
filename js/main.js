@@ -117,6 +117,58 @@
     });
   }
 
+  /* ---- GIF service icons: hold on first frame, play on card hover ---- */
+  (function () {
+    // Only freeze where hovering is possible; touch devices just let them play.
+    var canHover = !window.matchMedia || window.matchMedia("(hover: hover)").matches;
+    var gifs = document.querySelectorAll(".card__icon--media img");
+    if (!gifs.length || !canHover) return;
+
+    gifs.forEach(function (img) {
+      var card = img.closest(".card");
+      if (!card) return;
+      var gifSrc = img.getAttribute("src");
+      var staticSrc = null;
+
+      // Capture the first frame to a canvas so the icon sits still at rest.
+      function freeze() {
+        if (staticSrc) { img.src = staticSrc; return; }
+        try {
+          var w = img.naturalWidth, h = img.naturalHeight;
+          if (!w || !h) return;
+          var canvas = document.createElement("canvas");
+          canvas.width = w;
+          canvas.height = h;
+          canvas.getContext("2d").drawImage(img, 0, 0, w, h);
+          staticSrc = canvas.toDataURL("image/png");
+          img.src = staticSrc;
+        } catch (e) {
+          /* capture failed (e.g. tainted canvas) — leave the GIF playing */
+        }
+      }
+
+      function play() { if (staticSrc) img.src = gifSrc; }   // reload = restart from frame 1
+      function stop() { if (staticSrc) img.src = staticSrc; }
+
+      // Freeze as early as the first frame is decodable.
+      if (img.complete && img.naturalWidth) {
+        freeze();
+      } else if (img.decode) {
+        img.decode().then(freeze).catch(function () {
+          img.addEventListener("load", freeze, { once: true });
+        });
+      } else {
+        img.addEventListener("load", freeze, { once: true });
+      }
+
+      card.addEventListener("mouseenter", play);
+      card.addEventListener("mouseleave", stop);
+      // Keyboard users get it too when the card's link is focused.
+      card.addEventListener("focusin", play);
+      card.addEventListener("focusout", stop);
+    });
+  })();
+
   /* ---- Current year in footer ---- */
   var yr = document.querySelectorAll("[data-year]");
   yr.forEach(function (el) { el.textContent = new Date().getFullYear(); });
